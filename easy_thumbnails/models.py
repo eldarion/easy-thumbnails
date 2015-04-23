@@ -40,9 +40,10 @@ class FileManager(models.Manager):
         return obj
 
     def _get_thumbnail_manager(self):
-        if settings.THUMBNAIL_CACHE_DIMENSIONS:
-            return self.select_related("dimensions")
         return self
+        #if settings.THUMBNAIL_CACHE_DIMENSIONS:
+            #return self.select_related("dimensions")
+        #return self
 
 
 class File(models.Model):
